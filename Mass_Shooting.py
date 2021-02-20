@@ -57,6 +57,7 @@ left_column1.plotly_chart(fig_bar_state)
 
 
 ### Right Column 1 ###################################################################3
+right_column1.write('**Attention**: here it should be an animation with the map of the US, that I deactivated for optimization purposes (simply it will load faster)')
 # right_column1.header('Animations from 2014')
 # right_column1.write('Here it will appear the animation of the selected object form 2014')
 # if radio_selection == 'Killed':
