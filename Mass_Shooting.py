@@ -21,8 +21,8 @@ st.sidebar.write('This dashboard it is an evolution of an statistical school pro
 st.sidebar.write('>Data Source: https://www.gunviolencearchive.org/mass-shooting')
 
 # Map Control ########################################
-st.sidebar.header('Map Control')
-radio_selection= st.sidebar.radio('Select what you want to see on the map', ('Killed','Injured'))
+# st.sidebar.header('Map Control')
+# radio_selection= st.sidebar.radio('Select what you want to see on the map', ('Killed','Injured'))
 ######################################################
 
 # Graphs control #####################################
@@ -57,36 +57,36 @@ left_column1.plotly_chart(fig_bar_state)
 
 
 ### Right Column 1 ###################################################################3
-right_column1.header('Animations from 2014')
-right_column1.write('Here it will appear the animation of the selected object form 2014')
-if radio_selection == 'Killed':
-    fig = px.choropleth(mass_shooting_df,
-        locations=code,
-        color='# Killed',
-        hover_name='State',
-        animation_frame='Incident Date',
-        locationmode='USA-states'
-    )
+# right_column1.header('Animations from 2014')
+# right_column1.write('Here it will appear the animation of the selected object form 2014')
+# if radio_selection == 'Killed':
+#     fig = px.choropleth(mass_shooting_df,
+#         locations=code,
+#         color='# Killed',
+#         hover_name='State',
+#         animation_frame='Incident Date',
+#         locationmode='USA-states'
+#     )
 
-    fig.update_layout(
-        geo_scope='usa'
-    )
+#     fig.update_layout(
+#         geo_scope='usa'
+#     )
 
-    right_column1.plotly_chart(fig)
-elif radio_selection == 'Injured':
-    fig = px.choropleth(mass_shooting_df,
-        locations=code,
-        color='# Injured',
-        hover_name='State',
-        animation_frame='Incident Date',
-        locationmode='USA-states'
-    )
+#     right_column1.plotly_chart(fig)
+# elif radio_selection == 'Injured':
+#     fig = px.choropleth(mass_shooting_df,
+#         locations=code,
+#         color='# Injured',
+#         hover_name='State',
+#         animation_frame='Incident Date',
+#         locationmode='USA-states'
+#     )
 
-    fig.update_layout(
-        geo_scope='usa'
-    )
+#     fig.update_layout(
+#         geo_scope='usa'
+#     )
 
-    right_column1.plotly_chart(fig)
+#     right_column1.plotly_chart(fig)
 
 ######################################################################################
 #     
